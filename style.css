@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+header {
+    background-color:#5CE1E6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 70px;
+    
+}
+
+nav>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav>ul>li {
+    display: inline-block;
+    margin-left: 20px;
+    list-style: none;
+    font-family: montserrat;   
+    color:#f2f2f2;
+
+}
+
+nav a {
+    text-decoration: none;
+    color:#f2f2f2;
+}
+
+main {
+    padding: 20px;
+}
+
+h1,
+h2 {
+    color: #5CE1E6;
+    text-align: center;
+    margin-bottom: 20px ;
+}
+
+
+p{
+    font-family: poppins;
+    font-size: 1rem;
+    margin-bottom: 20Px;
+}
+
+h1,
+h2{
+    font-family: montserrat;
+    color: #5CE1E6;
+    text-align: center;
+}
+
+
+.skill-card {
+    background-color:#f2f2f2;
+    filter: drop-shadow(0 5px 10px 0 #f2f2f2);
+    border: 0.1rem solid #b5d6d7;
+    border-radius: 10px;
+    box-shadow: 0  0 10px 1px #95b4b5;
+    list-style: none;
+    width: 300px; 
+    height: 200px; 
+    padding: 20px;
+    margin: 20px;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    transition: color 0.6s ease-in, background-color 0.6s ease-in;
+    
+}
+
+.skill-card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -15px;
+    right: -15px;
+    background:#5CE1E6;
+    height: 220px;
+    width: 25px;
+    border-radius: 10px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+}
+
+.skill-card:hover::before {
+    transition-delay: 0.2s;
+    transform: scale(40);
+
+}
+
+.skill-card:hover {
+    color: #f2f2f2;
+    background-color: #5CE1E6;
+}
+
+
+.skill-card>h3{
+    font-family: montserrat;
+    margin-bottom: 10px;
+    
+}
+
+.skill-card>ul>li{
+    font-family: poppins;
+    list-style: none;
+
+}
+
+
+/* Styles pour les cartes de projet */
+/* Styles pour les cartes de projet */
+.projects .project {
+    background-color: #f2f2f2;
+    filter: drop-shadow(0 5px 10px 0 #f2f2f2);
+    border: 0.1rem solid #b5d6d7;
+    border-radius: 10px;
+    box-shadow: 0  0 10px 1px #95b4b5;
+    width: 300px; 
+    height: 200px; 
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    transition: color 0.6s ease-in, background-color 0.6s ease-in;
+}
+
+.projects .project h3 {
+    font-family: montserrat;
+    color: #fff;
+    background-color: #5CE1E6;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    border-radius: 10px 10px 0 0; /* Coins arrondis uniquement en haut */
+}
+
+.projects .project img {
+    width: 100%;
+    height: auto;
+}
+
+.projects .project a {
+    display: block;
+    text-align: center;
+    background-color: #5CE1E6;
+    color: #fff;
+    padding: 10px;
+    border-radius: 0 0 10px 10px; /* Coins arrondis uniquement en bas */
+    text-decoration: none;
+    margin-top: auto;
+}
+
+
+footer {
+    background-color: #5CE1E6;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+@media screen and (min-width: 992px) { 
+
+    h2{
+        margin: 30px;
+    }
+
+    .skill-container {
+        display: flex; 
+        justify-content: space-between; 
+        margin: 10px;
+        
+    }
+
+    .skill-card {
+        width: 30%; 
+        margin-bottom: 20px; 
+    }
+
+    .skill-card:first-child {
+        margin-left: 0; /* Supprimer la marge à gauche pour la première carte */
+        border-top-left-radius: 10px; /* Coin supérieur gauche arrondi uniquement pour la première carte */
+        border-bottom-left-radius: 10px; /* Coin inférieur gauche arrondi uniquement pour la première carte */
+    }
+
+    .skill-card:last-child {
+        border-top-right-radius: 10px; 
+        border-bottom-right-radius: 10px; 
+    }
+}
+
+
+
