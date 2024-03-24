@@ -127,22 +127,19 @@ h2{
 }
 
 
-/* Styles pour les cartes de projet */
-/* Styles pour les cartes de projet */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grid flexible avec une largeur minimale de 300px */
+    gap: 20px; 
+}
+
 .projects .project {
     background-color: #f2f2f2;
-    filter: drop-shadow(0 5px 10px 0 #f2f2f2);
     border: 0.1rem solid #b5d6d7;
     border-radius: 10px;
     box-shadow: 0  0 10px 1px #95b4b5;
-    width: 300px; 
-    height: 200px; 
     padding: 20px;
-    margin: 20px;
-    position: relative;
-    z-index: 0;
-    overflow: hidden;
-    transition: color 0.6s ease-in, background-color 0.6s ease-in;
+
 }
 
 .projects .project h3 {
@@ -168,8 +165,8 @@ h2{
     padding: 10px;
     border-radius: 0 0 10px 10px; /* Coins arrondis uniquement en bas */
     text-decoration: none;
-    margin-top: auto;
 }
+
 
 
 footer {
@@ -202,17 +199,28 @@ footer a {
         margin-bottom: 20px; 
     }
 
-    .skill-card:first-child {
-        margin-left: 0; /* Supprimer la marge à gauche pour la première carte */
-        border-top-left-radius: 10px; /* Coin supérieur gauche arrondi uniquement pour la première carte */
-        border-bottom-left-radius: 10px; /* Coin inférieur gauche arrondi uniquement pour la première carte */
+    
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
+    
+   
+    .projects .project {
+         width: 15%; 
+        margin-right: 10px; 
+        margin-bottom: 20px; 
     }
 
-    .skill-card:last-child {
-        border-top-right-radius: 10px; 
-        border-bottom-right-radius: 10px; 
+    .projects .project img {
+        width: 100%; /* Définir une largeur fixe */
+        height: auto; /* Permettre à la hauteur de s'ajuster automatiquement */
     }
+    
 }
+
+  
 
 
 
